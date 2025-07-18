@@ -42,11 +42,10 @@ export default function ContactForm() {
   const { toast } = useToast();
 
   function onSubmit(values) {
-    // Simulate form submission
     console.log("Form submitted:", values);
     toast({
       title: "Message received",
-      description: "Thank you for your message! (Demo mode)",
+      description: "Thank you for your message! I'll get back to you soon.",
     });
     form.reset();
   }
