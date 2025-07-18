@@ -42,32 +42,13 @@ export default function ContactForm() {
   const { toast } = useToast();
 
   function onSubmit(values) {
-    fetch("/api/send", {
-      method: "POST",
-      body: JSON.stringify(values),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then(async (res) => {
-        const data = await res.json();
-        console.log(data);
-        if (data?.id) {
-          toast({
-            title: "Message sent",
-            description: "Thank you for your message!",
-          });
-          form.reset();
-        }
-      })
-      .catch((err) => {
-        console.log(err);
-        toast({
-          title: "Error",
-          description: "Failed to send message. Please try again.",
-          variant: "destructive",
-        });
-      });
+    // Simulate form submission
+    console.log("Form submitted:", values);
+    toast({
+      title: "Message received",
+      description: "Thank you for your message! (Demo mode)",
+    });
+    form.reset();
   }
 
   return (
