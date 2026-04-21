@@ -42,7 +42,7 @@ export default function page() {
           transition={transition.moveUp}
           className="text-center max-w-4xl mx-auto mb-16"
         >
-          <h1 className="font-display mb-6">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display leading-tight mb-3 sm:mb-4 lg:mb-6">
             Let's <span className="gradient-text">Work Together</span>
           </h1>
           <p className="text-xl text-slate-600 dark:text-slate-300 leading-relaxed">

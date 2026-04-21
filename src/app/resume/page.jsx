@@ -14,12 +14,12 @@ const experience = [
   {
     title: "Full Stack Developer",
     company: "Ethiotelecom",
-    period: "2023 - Present",
+    period: "2023 and 2024",
     location: "Addis Ababa, Ethiopia",
     description:
-      "Developed a Virtual Internship Platform serving 1000+ users with modern web technologies.",
+      "Developed a Job post Platform serving 1000+ users with modern web technologies.",
     achievements: [
-      "Built scalable web applications using React and Node.js",
+      "Built scalable web applications using React and Next.js",
       "Implemented responsive designs with 95% mobile compatibility",
       "Optimized application performance by 40%",
     ],
@@ -90,9 +90,9 @@ export default function Resume() {
                   web technologies.
                 </p>
                 <p>
-                  My technical expertise spans ReactJS, Next.js, Node.js, and
-                  MongoDB, allowing me to build comprehensive web applications
-                  from concept to deployment.
+                  My technical expertise spans ReactJS, Next.js, Node.js,
+                  Nest.js and MongoDB, allowing me to build comprehensive web
+                  applications from concept to deployment.
                 </p>
               </div>
             </div>
@@ -121,6 +121,7 @@ export default function Resume() {
                     category: "Backend",
                     skills: [
                       "Node.js",
+                      "Nest.js",
                       "Express.js",
                       "MongoDB",
                       "PostgreSQL",
@@ -130,14 +131,7 @@ export default function Resume() {
                   },
                   {
                     category: "Tools & Others",
-                    skills: [
-                      "Git",
-                      "Docker",
-                      "AWS",
-                      "Figma",
-                      "Adobe XD",
-                      "Vercel",
-                    ],
+                    skills: ["Git", "AWS", "Figma", "Adobe XD", "Vercel"],
                     color: "from-purple-500 to-violet-500",
                   },
                 ].map((skillGroup, index) => (

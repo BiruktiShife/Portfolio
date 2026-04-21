@@ -113,7 +113,7 @@ export default function page() {
                 transition={{ ...transition.moveUp, delay: 0.4 }}
                 className="flex items-center gap-3"
               >
-                <span className="text-sm font-medium text-slate-500 dark:text-slate-500">
+                <span className="text-sm font-medium text-slate-600 dark:text-slate-400">
                   Connect:
                 </span>
                 <div className="flex flex-wrap gap-3">

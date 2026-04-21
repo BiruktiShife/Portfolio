@@ -1,12 +1,7 @@
 import { MotionDiv } from "@/utils/motionTags";
 import { transition, variants } from "@/utils/framer_variants";
 import { SERVICES } from "@/utils/data";
-import {
-  CheckIcon,
-  PaletteIcon,
-  CodeIcon,
-  ServerIcon,
-} from "lucide-react";
+import { CheckIcon, PaletteIcon, CodeIcon, ServerIcon } from "lucide-react";
 
 const serviceTheme = {
   1: {
@@ -67,7 +62,7 @@ export default function page() {
           transition={transition.moveUp}
           className="text-center max-w-4xl mx-auto mb-20 relative"
         >
-          <h1 className="font-display mb-6">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display leading-tight mb-3 sm:mb-4 lg:mb-6">
             Services <span className="gradient-text">Built For Growth</span>
           </h1>
           <p className="text-xl text-slate-600 dark:text-slate-300 leading-relaxed max-w-3xl mx-auto">

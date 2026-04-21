@@ -98,12 +98,7 @@ export default function Projects() {
           transition={transition.moveUp}
           className="text-center mb-8 sm:mb-12 lg:mb-16"
         >
-          <div className="inline-flex items-center space-x-2 bg-violet-100 border border-violet-200 text-violet-700 dark:bg-violet-500/20 dark:border-violet-400/30 dark:text-violet-200 px-3 sm:px-4 lg:px-6 py-2 sm:py-3 rounded-full text-xs sm:text-sm font-medium mb-3 sm:mb-4 lg:mb-6">
-            <CodeIcon className="w-3 h-3 sm:w-4 sm:h-4" />
-            <span>Featured Work</span>
-          </div>
-
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-3 sm:mb-4 lg:mb-6">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display leading-tight mb-3 sm:mb-4 lg:mb-6">
             My <span className="gradient-text">Projects</span>
           </h1>
           <p className="text-base sm:text-lg lg:text-xl text-slate-600 dark:text-slate-300 leading-relaxed max-w-3xl mx-auto px-4">
@@ -255,7 +250,7 @@ export default function Projects() {
                         key={project.title}
                         className={cn(
                           "!w-48 sm:!w-64 lg:!w-72 xl:!w-80 transition-all duration-500",
-                          index - 1 !== i && "opacity-60"
+                          index - 1 !== i && "opacity-60",
                         )}
                       >
                         <div className="relative group cursor-pointer">
@@ -292,7 +287,7 @@ export default function Projects() {
                             "w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full transition-all duration-300",
                             index - 1 === i
                               ? "bg-violet-600 w-3 sm:w-4 lg:w-6"
-                              : "bg-slate-300 hover:bg-slate-400 dark:bg-slate-500 dark:hover:bg-slate-400"
+                              : "bg-slate-300 hover:bg-slate-400 dark:bg-slate-500 dark:hover:bg-slate-400",
                           )}
                         />
                       ))}
