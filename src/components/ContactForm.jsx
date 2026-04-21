@@ -41,13 +41,43 @@ export default function ContactForm() {
 
   const { toast } = useToast();
 
-  function onSubmit(values) {
-    console.log("Form submitted:", values);
-    toast({
-      title: "Message received",
-      description: "Thank you for your message! I'll get back to you soon.",
-    });
-    form.reset();
+  async function onSubmit(values) {
+    try {
+      const response = await fetch(
+        "https://formsubmit.co/ajax/biruktawitshiferaw522@gmail.com",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({
+            name: values.name,
+            email: values.email,
+            message: values.message,
+            _subject: "New Portfolio Contact Message",
+          }),
+        },
+      );
+
+      if (!response.ok) {
+        throw new Error("Failed to send message");
+      }
+
+      toast({
+        title: "Message sent",
+        description: "Thanks! Your message has been delivered successfully.",
+      });
+      form.reset();
+    } catch (error) {
+      console.error("Contact form submit error:", error);
+      toast({
+        title: "Send failed",
+        description:
+          "Sorry, your message could not be sent right now. Please try again.",
+        variant: "destructive",
+      });
+    }
   }
 
   return (
