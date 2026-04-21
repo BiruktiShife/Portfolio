@@ -1,6 +1,5 @@
 "use client";
 
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
@@ -9,12 +8,7 @@ import {
   CalendarIcon,
   BriefcaseIcon,
 } from "lucide-react";
-import { MotionDiv, MotionImage, MotionButton } from "@/utils/motionTags";
-const skills = {
-  frontend: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
-  backend: ["Node.js", "Express", "MongoDB", "PostgreSQL", "REST APIs"],
-  tools: ["Git", "Docker", "Figma", "VS Code", "Postman"],
-};
+import { MotionImage } from "@/utils/motionTags";
 
 const experience = [
   {
@@ -34,9 +28,9 @@ const experience = [
 
 export default function Resume() {
   return (
-    <div className="min-h-screen pt-24 sm:pt-32 pb-10 sm:pb-20">
+    <div className="min-h-screen pt-24 sm:pt-32 pb-10 sm:pb-20 bg-slate-50 dark:bg-slate-950">
       <div className="container mx-auto px-4 max-w-6xl">
-        <div className="bg-white/80 backdrop-blur-lg border border-white/20 rounded-xl sm:rounded-2xl shadow-lg p-6 sm:p-8 mb-8 sm:mb-12">
+        <div className="bg-white/90 dark:bg-slate-900/70 backdrop-blur-lg border border-slate-200 dark:border-slate-700 rounded-xl sm:rounded-2xl shadow-lg p-6 sm:p-8 mb-8 sm:mb-12">
           <div className="flex flex-col lg:flex-row gap-6 lg:gap-0 items-center justify-between w-full">
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-7 items-center">
               <div className="relative">
@@ -54,13 +48,13 @@ export default function Resume() {
               </div>
 
               <div className="text-center sm:text-left">
-                <h1 className="text-2xl sm:text-3xl font-bold text-neutral-800 mb-1 sm:mb-2">
+                <h1 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-slate-100 mb-1 sm:mb-2">
                   Biruktawit Shiferaw
                 </h1>
-                <p className="text-base sm:text-lg text-violet-600 font-medium mb-2 sm:mb-3">
+                <p className="text-base sm:text-lg text-violet-300 font-medium mb-2 sm:mb-3">
                   Full Stack Developer
                 </p>
-                <p className="text-sm sm:text-base text-neutral-600 max-w-md">
+                <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 max-w-md">
                   Passionate about creating beautiful, functional digital
                   experiences
                 </p>
@@ -68,15 +62,18 @@ export default function Resume() {
             </div>
 
             <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-3 w-full sm:w-auto">
-              <Button
-                variant="outline"
-                size="lg"
-                className="group text-sm sm:text-base"
-              >
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="group text-sm sm:text-base border-slate-300 bg-white text-slate-800 hover:bg-slate-100 dark:border-slate-600 dark:bg-slate-900/70 dark:text-slate-100 dark:hover:bg-slate-800"
+                >
                 <DownloadIcon className="w-4 h-4 sm:w-5 sm:h-5 mr-2 group-hover:animate-bounce" />
                 Download CV
               </Button>
-              <Button size="lg" className="text-sm sm:text-base">
+              <Button
+                size="lg"
+                className="text-sm sm:text-base bg-gradient-to-r from-violet-500 to-fuchsia-500 hover:from-violet-600 hover:to-fuchsia-600"
+              >
                 Contact Me
               </Button>
             </div>
@@ -84,7 +81,7 @@ export default function Resume() {
         </div>
 
         <Tabs defaultValue="about" className="space-y-6 sm:space-y-8">
-          <TabsList className="bg-white/80 backdrop-blur-lg border border-white/20 rounded-xl sm:rounded-2xl shadow-lg p-1 sm:p-2 w-full sm:w-auto grid grid-cols-3 sm:flex">
+          <TabsList className="bg-white/90 dark:bg-slate-900/70 backdrop-blur-lg border border-slate-200 dark:border-slate-700 rounded-xl sm:rounded-2xl shadow-lg p-1 sm:p-2 w-full sm:w-auto grid grid-cols-3 sm:flex">
             <TabsTrigger value="about" className="text-xs sm:text-sm">
               About
             </TabsTrigger>
@@ -97,11 +94,11 @@ export default function Resume() {
           </TabsList>
 
           <TabsContent value="about" className="space-y-4 sm:space-y-6">
-            <div className="bg-white/80 backdrop-blur-lg border border-white/20 rounded-xl sm:rounded-2xl shadow-lg p-6 sm:p-8">
-              <h3 className="text-xl sm:text-2xl font-bold text-neutral-800 mb-4 sm:mb-6">
+            <div className="bg-white/90 dark:bg-slate-900/70 backdrop-blur-lg border border-slate-200 dark:border-slate-700 rounded-xl sm:rounded-2xl shadow-lg p-6 sm:p-8">
+              <h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-slate-100 mb-4 sm:mb-6">
                 About Me
               </h3>
-              <div className="space-y-3 sm:space-y-4 text-sm sm:text-base text-neutral-600 leading-relaxed">
+              <div className="space-y-3 sm:space-y-4 text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed">
                 <p>
                   I'm Biruktawit Shiferaw, a passionate Full-Stack Web Developer
                   with expertise in creating dynamic, user-friendly digital
@@ -119,8 +116,8 @@ export default function Resume() {
           </TabsContent>
 
           <TabsContent value="skills" className="space-y-4 sm:space-y-6">
-            <div className="bg-white/80 backdrop-blur-lg border border-white/20 rounded-xl sm:rounded-2xl shadow-lg p-6 sm:p-8">
-              <h3 className="text-xl sm:text-2xl font-bold text-neutral-800 mb-4 sm:mb-6">
+            <div className="bg-white/90 dark:bg-slate-900/70 backdrop-blur-lg border border-slate-200 dark:border-slate-700 rounded-xl sm:rounded-2xl shadow-lg p-6 sm:p-8">
+              <h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-slate-100 mb-4 sm:mb-6">
                 Technical Skills
               </h3>
               <div className="grid gap-4 sm:gap-6">
@@ -162,7 +159,7 @@ export default function Resume() {
                   },
                 ].map((skillGroup, index) => (
                   <div key={index} className="space-y-3 sm:space-y-4">
-                    <h4 className="text-base sm:text-lg font-semibold text-neutral-800">
+                    <h4 className="text-base sm:text-lg font-semibold text-slate-900 dark:text-slate-100">
                       {skillGroup.category}
                     </h4>
                     <div className="flex flex-wrap gap-2 sm:gap-3">
@@ -185,7 +182,7 @@ export default function Resume() {
             {experience.map((exp, i) => (
               <div
                 key={i}
-                className="bg-white/80 backdrop-blur-lg border border-white/20 rounded-2xl shadow-lg p-8"
+                className="bg-white/90 dark:bg-slate-900/70 backdrop-blur-lg border border-slate-200 dark:border-slate-700 rounded-2xl shadow-lg p-8"
               >
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-violet-500 to-purple-500 rounded-xl flex items-center justify-center text-white flex-shrink-0">
@@ -194,14 +191,14 @@ export default function Resume() {
                   <div className="flex-1">
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
                       <div>
-                        <h4 className="text-xl font-bold text-neutral-800">
+                        <h4 className="text-xl font-bold text-slate-900 dark:text-slate-100">
                           {exp.title}
                         </h4>
-                        <p className="text-violet-600 font-medium">
+                        <p className="text-violet-300 font-medium">
                           {exp.company}
                         </p>
                       </div>
-                      <div className="flex items-center space-x-4 text-sm text-neutral-500">
+                      <div className="flex items-center space-x-4 text-sm text-slate-500 dark:text-slate-400">
                         <div className="flex items-center space-x-1">
                           <CalendarIcon className="w-4 h-4" />
                           <span>{exp.period}</span>
@@ -212,12 +209,12 @@ export default function Resume() {
                         </div>
                       </div>
                     </div>
-                    <p className="text-neutral-600 mb-4">{exp.description}</p>
+                    <p className="text-slate-600 dark:text-slate-300 mb-4">{exp.description}</p>
                     <ul className="space-y-2">
                       {exp.achievements.map((achievement, idx) => (
                         <li
                           key={idx}
-                          className="flex items-start space-x-2 text-neutral-600"
+                          className="flex items-start space-x-2 text-slate-600 dark:text-slate-300"
                         >
                           <div className="w-1.5 h-1.5 bg-violet-400 rounded-full mt-2 flex-shrink-0"></div>
                           <span>{achievement}</span>

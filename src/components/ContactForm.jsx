@@ -81,12 +81,12 @@ export default function ContactForm() {
   }
 
   return (
-    <div className="glass-card p-4 sm:p-6 lg:p-8 space-y-4 sm:space-y-6 lg:space-y-8">
+    <div className="rounded-2xl border border-slate-200 bg-white/90 dark:border-slate-700 dark:bg-slate-900/70 p-4 sm:p-6 lg:p-8 space-y-4 sm:space-y-6 lg:space-y-8">
       <div className="space-y-2 sm:space-y-3">
-        <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-neutral-800">
+        <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-slate-900 dark:text-slate-100">
           Send me a message
         </h3>
-        <p className="text-xs sm:text-sm lg:text-base text-neutral-600">
+        <p className="text-xs sm:text-sm lg:text-base text-slate-600 dark:text-slate-300">
           Fill out the form below and I'll get back to you as soon as possible.
         </p>
       </div>
@@ -101,14 +101,14 @@ export default function ContactForm() {
             name="name"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="text-xs sm:text-sm lg:text-base font-medium text-neutral-700">
+                <FormLabel className="text-xs sm:text-sm lg:text-base font-medium text-slate-700 dark:text-slate-200">
                   Full Name
                 </FormLabel>
                 <FormControl>
                   <Input
                     placeholder="Your full name"
                     {...field}
-                    className="h-9 sm:h-10 lg:h-12 text-xs sm:text-sm lg:text-base border-neutral-200 focus:border-violet-400 focus:ring-violet-400/20 rounded-md sm:rounded-lg lg:rounded-xl"
+                    className="h-9 sm:h-10 lg:h-12 text-xs sm:text-sm lg:text-base border-slate-300 bg-white text-slate-900 focus:border-violet-400 focus:ring-violet-400/20 rounded-md sm:rounded-lg lg:rounded-xl dark:border-slate-600 dark:bg-slate-950/70 dark:text-slate-100"
                   />
                 </FormControl>
                 <FormMessage className="text-xs sm:text-sm" />
@@ -121,7 +121,7 @@ export default function ContactForm() {
             name="email"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="text-xs sm:text-sm lg:text-base font-medium text-neutral-700">
+                <FormLabel className="text-xs sm:text-sm lg:text-base font-medium text-slate-700 dark:text-slate-200">
                   Email Address
                 </FormLabel>
                 <FormControl>
@@ -129,7 +129,7 @@ export default function ContactForm() {
                     placeholder="your.email@example.com"
                     type="email"
                     {...field}
-                    className="h-9 sm:h-10 lg:h-12 text-xs sm:text-sm lg:text-base border-neutral-200 focus:border-violet-400 focus:ring-violet-400/20 rounded-md sm:rounded-lg lg:rounded-xl"
+                    className="h-9 sm:h-10 lg:h-12 text-xs sm:text-sm lg:text-base border-slate-300 bg-white text-slate-900 focus:border-violet-400 focus:ring-violet-400/20 rounded-md sm:rounded-lg lg:rounded-xl dark:border-slate-600 dark:bg-slate-950/70 dark:text-slate-100"
                   />
                 </FormControl>
                 <FormMessage className="text-xs sm:text-sm" />
@@ -142,13 +142,13 @@ export default function ContactForm() {
             name="message"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="text-xs sm:text-sm lg:text-base font-medium text-neutral-700">
+                <FormLabel className="text-xs sm:text-sm lg:text-base font-medium text-slate-700 dark:text-slate-200">
                   Message
                 </FormLabel>
                 <FormControl>
                   <Textarea
                     placeholder="Tell me about your project..."
-                    className="min-h-[80px] sm:min-h-[100px] lg:min-h-[120px] text-xs sm:text-sm lg:text-base border-neutral-200 focus:border-violet-400 focus:ring-violet-400/20 rounded-md sm:rounded-lg lg:rounded-xl resize-none"
+                    className="min-h-[80px] sm:min-h-[100px] lg:min-h-[120px] text-xs sm:text-sm lg:text-base border-slate-300 bg-white text-slate-900 focus:border-violet-400 focus:ring-violet-400/20 rounded-md sm:rounded-lg lg:rounded-xl resize-none dark:border-slate-600 dark:bg-slate-950/70 dark:text-slate-100"
                     {...field}
                   />
                 </FormControl>

@@ -32,7 +32,7 @@ export default function page() {
   ];
 
   return (
-    <div className="min-h-screen pt-32 pb-20">
+    <div className="min-h-screen pt-32 pb-20 bg-slate-50 dark:bg-slate-950">
       <div className="container mx-auto px-4">
         {/* Header */}
         <MotionDiv
@@ -45,7 +45,7 @@ export default function page() {
           <h1 className="font-display mb-6">
             Let's <span className="gradient-text">Work Together</span>
           </h1>
-          <p className="text-xl text-neutral-600 leading-relaxed">
+          <p className="text-xl text-slate-600 dark:text-slate-300 leading-relaxed">
             Ready to bring your ideas to life? I'd love to hear about your
             project and discuss how we can create something amazing together.
           </p>
@@ -61,7 +61,7 @@ export default function page() {
             className="space-y-6 lg:space-y-8"
           >
             <div className="space-y-4 lg:space-y-6">
-              <h3 className="text-xl lg:text-2xl font-bold text-neutral-800 mb-6 lg:mb-8">
+              <h3 className="text-xl lg:text-2xl font-bold text-slate-900 dark:text-slate-100 mb-6 lg:mb-8">
                 Get in Touch
               </h3>
 
@@ -71,20 +71,20 @@ export default function page() {
                     key={i}
                     variants={variants.scale}
                     transition={{ ...transition.scale, delay: 0.3 + i * 0.1 }}
-                    className="glass-card p-4 lg:p-6 hover:shadow-medium transition-all duration-300"
+                    className="rounded-2xl border border-slate-200 bg-white/90 p-4 lg:p-6 transition-all duration-300 hover:border-violet-400/60 dark:border-slate-700 dark:bg-slate-900/70"
                   >
                     <div className="flex items-start space-x-3 lg:space-x-4">
                       <div className="w-10 h-10 lg:w-12 lg:h-12 bg-gradient-to-r from-violet-500 to-purple-500 rounded-lg lg:rounded-xl flex items-center justify-center text-white flex-shrink-0">
                         {info.icon}
                       </div>
                       <div className="flex-1 min-w-0">
-                        <h4 className="font-semibold text-neutral-800 mb-1 text-sm lg:text-base">
+                        <h4 className="font-semibold text-slate-900 dark:text-slate-100 mb-1 text-sm lg:text-base">
                           {info.title}
                         </h4>
-                        <p className="text-neutral-600 font-medium mb-1 text-sm lg:text-base">
+                        <p className="text-slate-600 dark:text-slate-300 font-medium mb-1 text-sm lg:text-base">
                           {info.details}
                         </p>
-                        <p className="text-xs lg:text-sm text-neutral-500">
+                        <p className="text-xs lg:text-sm text-slate-500 dark:text-slate-400">
                           {info.subtext}
                         </p>
                       </div>
@@ -98,16 +98,16 @@ export default function page() {
             <MotionDiv
               variants={variants.scale}
               transition={{ ...transition.scale, delay: 0.7 }}
-              className="glass-card p-6 h-64 relative overflow-hidden"
+              className="rounded-2xl border border-slate-200 bg-white/90 dark:border-slate-700 dark:bg-slate-900/70 p-6 h-64 relative overflow-hidden"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-violet-100 to-purple-100 opacity-50"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-violet-500/20 to-cyan-500/20 opacity-60"></div>
               <div className="relative z-10 h-full flex items-center justify-center">
                 <div className="text-center">
-                  <MapPinIcon className="w-12 h-12 text-violet-600 mx-auto mb-4" />
-                  <h4 className="font-semibold text-neutral-800 mb-2">
+                  <MapPinIcon className="w-12 h-12 text-violet-300 mx-auto mb-4" />
+                  <h4 className="font-semibold text-slate-900 dark:text-slate-100 mb-2">
                     Addis Ababa, Ethiopia
                   </h4>
-                  <p className="text-neutral-600">
+                  <p className="text-slate-600 dark:text-slate-300">
                     Available for remote collaboration worldwide
                   </p>
                 </div>
