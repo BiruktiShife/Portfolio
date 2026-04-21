@@ -60,23 +60,6 @@ export default function Resume() {
                 </p>
               </div>
             </div>
-
-            <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-3 w-full sm:w-auto">
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="group text-sm sm:text-base border-slate-300 bg-white text-slate-800 hover:bg-slate-100 dark:border-slate-600 dark:bg-slate-900/70 dark:text-slate-100 dark:hover:bg-slate-800"
-                >
-                <DownloadIcon className="w-4 h-4 sm:w-5 sm:h-5 mr-2 group-hover:animate-bounce" />
-                Download CV
-              </Button>
-              <Button
-                size="lg"
-                className="text-sm sm:text-base bg-gradient-to-r from-violet-500 to-fuchsia-500 hover:from-violet-600 hover:to-fuchsia-600"
-              >
-                Contact Me
-              </Button>
-            </div>
           </div>
         </div>
 
@@ -209,7 +192,9 @@ export default function Resume() {
                         </div>
                       </div>
                     </div>
-                    <p className="text-slate-600 dark:text-slate-300 mb-4">{exp.description}</p>
+                    <p className="text-slate-600 dark:text-slate-300 mb-4">
+                      {exp.description}
+                    </p>
                     <ul className="space-y-2">
                       {exp.achievements.map((achievement, idx) => (
                         <li
