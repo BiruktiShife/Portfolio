@@ -15,7 +15,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 const STATS = [
-  { number: "50+", label: "Projects Delivered", icon: BriefcaseBusinessIcon },
+  { number: "20+", label: "Projects Delivered", icon: BriefcaseBusinessIcon },
   { number: "3+", label: "Years Experience", icon: TrophyIcon },
   { number: "100%", label: "Client Satisfaction", icon: ShieldCheckIcon },
   { number: "24/7", label: "Reliable Support", icon: Clock3Icon },
