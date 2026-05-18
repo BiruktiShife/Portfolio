@@ -27,6 +27,23 @@ import {
 
 const projects = [
   {
+    title: "TalentBridge Internship Management and career development platform",
+    category: "fullstack",
+    image: "/dashboard TB.PNG",
+    stack: ["Nextjs", "TypeScript", "ShadCN", "PostgreSQL"],
+    github: "https://github.com/abate-Agegnehu/talent_bridge",
+    description:
+      "TalentBridge is a centralized digital platform that streamlines internship management, progress tracking, supervision, and evaluation — all in one place.",
+    features: [
+      "Role-Based Access",
+      "Internship Posting & Applications",
+      "Progress Tracking & Weekly Reports",
+      "Integrated Communication & Messaging",
+      "Advisor Assignment & Supervision",
+      "Evaluation, Reports & Analytics",
+    ],
+  },
+  {
     title: "Finance Management",
     category: "fullstack",
     image: "/finance.png",

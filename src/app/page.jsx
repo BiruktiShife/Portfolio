@@ -63,15 +63,6 @@ export default function page() {
             >
               <MotionDiv
                 variants={variants.moveUp}
-                transition={{ ...transition.moveUp, delay: 0.1 }}
-                className="inline-flex items-center gap-2 rounded-full border border-violet-300/60 bg-violet-100 px-4 py-2 text-sm font-medium text-violet-700 dark:border-violet-300/40 dark:bg-violet-500/15 dark:text-violet-100"
-              >
-                <span className="h-2 w-2 rounded-full bg-emerald-500" />
-                Available for new projects
-              </MotionDiv>
-
-              <MotionDiv
-                variants={variants.moveUp}
                 transition={{ ...transition.moveUp, delay: 0.2 }}
                 className="space-y-4"
               >
