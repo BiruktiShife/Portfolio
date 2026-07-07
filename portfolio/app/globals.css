@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Deep navy-slate background, warm off-white text, amber-gold accent, moss-green secondary accent */
+    --background: 222 39% 8%;
+    --foreground: 42 33% 92%;
+
+    --surface: 220 32% 11%;
+
+    --card: 220 32% 12%;
+    --card-foreground: 42 33% 92%;
+
+    --primary: 42 33% 92%;
+    --primary-foreground: 222 39% 8%;
+
+    --secondary: 220 24% 16%;
+    --secondary-foreground: 42 33% 92%;
+
+    --muted: 220 20% 16%;
+    --muted-foreground: 218 14% 65%;
+
+    --accent: 39 78% 56%;
+    --accent-foreground: 222 39% 8%;
+
+    --moss: 160 30% 48%;
+    --moss-foreground: 222 39% 8%;
+
+    --destructive: 4 78% 62%;
+    --destructive-foreground: 42 33% 96%;
+
+    --border: 220 20% 20%;
+    --input: 220 20% 20%;
+    --ring: 39 78% 56%;
+
+    --radius: 0.6rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground font-body;
+    background-image:
+      radial-gradient(
+        60rem 30rem at 85% -10%,
+        hsl(39 78% 56% / 0.08),
+        transparent 60%
+      ),
+      radial-gradient(
+        40rem 30rem at -10% 20%,
+        hsl(160 30% 48% / 0.06),
+        transparent 60%
+      );
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .font-tabular {
+    font-variant-numeric: tabular-nums;
+  }
+
+  .grain {
+    position: relative;
+  }
+
+  .caret {
+    display: inline-block;
+    width: 0.55ch;
+    background: hsl(var(--accent));
+    animation: blink 1s step-end infinite;
+    margin-left: 2px;
+    transform: translateY(2px);
+  }
+
+  .commit-line {
+    position: relative;
+  }
+  .commit-line::before {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 1.9rem;
+    bottom: -2.5rem;
+    width: 1px;
+    background: linear-gradient(
+      to bottom,
+      hsl(var(--accent) / 0.5),
+      hsl(var(--border))
+    );
+  }
+  .commit-line:last-child::before {
+    display: none;
+  }
+
+  .noise-card {
+    background: linear-gradient(
+      180deg,
+      hsl(var(--card)) 0%,
+      hsl(var(--surface)) 100%
+    );
+  }
+}

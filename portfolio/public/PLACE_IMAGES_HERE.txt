@@ -1,0 +1,11 @@
+Add these image files to the /public folder for the site to display correctly:
+
+/public/profile.jpg          -> your headshot (used in the hero section)
+/public/projects/talentbridge.png   -> TalentBridge screenshot
+/public/projects/job-board.png      -> Job Board Platform screenshot
+/public/projects/translator.png     -> Local Language Translator screenshot
+/public/projects/tatari-hub.png     -> Tatari Hub screenshot
+/public/resume.pdf                  -> your resume, linked from the "Download resume" button
+
+You can reuse the images from your old portfolio (profil.png, dashboard TB.PNG,
+jobs in company.png, language.png, tatari.PNG) — just rename/convert and drop them in.
